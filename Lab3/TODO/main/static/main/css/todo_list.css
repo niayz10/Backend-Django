@@ -105,13 +105,13 @@ button:hover {
 button:focus {
     outline: none;
 }
-#add {
+#add-button {
     background-color: #157FFB;
     border: 1px solid #1670DA;
     color: #FCFBFF;
     margin-bottom: 25px;
 }
-#add:hover {
+#add-button:hover {
     background-color: #1665C2;
 }
 #view {
@@ -152,13 +152,13 @@ span {
     padding-left: 25px;
     font-weight: bolder;
 }
-#parent_content {
+.content {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
-#content {
+.main-content {
     min-width: 75%;
 }
 table {
