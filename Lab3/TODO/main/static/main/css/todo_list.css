@@ -148,7 +148,7 @@ header {
     justify-content: flex-start;
     margin-bottom: 25px;
 }
-span {
+#head {
     padding-left: 25px;
     font-weight: bolder;
 }
@@ -169,7 +169,13 @@ tr {
     padding-top: 5px;
     padding-bottom: 5px;
 }
-tr.line td, .line{
+tr.list td, .list{
     border-top: 1px solid #d9d9d9;
     padding-top: 25px;
+}
+#task{
+    color: #0A7EFB;
+}
+#column{
+ font-weight: bolder;
 }
