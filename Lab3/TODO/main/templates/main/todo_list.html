@@ -1,4 +1,4 @@
-% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +8,18 @@
 </head>
 <body>
    <header>
-            <span>BFDjango TODO</span>
+            <div id="head">BFDjango TODO</div>
    </header>
         <div class="content">
             <div class="main-content">
                 <div>
                     <button id="add-button">Add Task</button>
                 </div>
-                <div class="line">
+                <div class="list">
                     <h1>Tasks in "List1"</h1>
                 </div>
                 <table>
-                        <tr class="line sp" style="font-weight: bolder">
+                        <tr class="list" id="column">
                            <td>Task</td>
                            <td>Created</td>
                            <td>Due on</td>
@@ -28,8 +28,8 @@
                         </tr>
                         {% for task in tasks %}
                             {% if not task.Mark %}
-                                <tr class="line sp">
-                                    <td style="color: #0A7EFB"> {{ task.Task }}</td>
+                                <tr class="list">
+                                    <td id="task"> {{ task.Task }}</td>
                                     <td> {{ task.Created }}</td>
                                     <td> {{ task.Due_on }}</td>
                                     <td> {{ task.Owner }}</td>
