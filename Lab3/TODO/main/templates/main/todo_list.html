@@ -1,4 +1,4 @@
-{% load static %}
+% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +9,11 @@
 <body>
    <header>
             <span>BFDjango TODO</span>
-        </header>
-        <div id="parent_content">
-            <div id="content">
+   </header>
+        <div class="content">
+            <div class="main-content">
                 <div>
-                    <button id="add">Add Task</button>
+                    <button id="add-button">Add Task</button>
                 </div>
                 <div class="line">
                     <h1>Tasks in "List1"</h1>
@@ -26,7 +26,7 @@
                            <td>Owner</td>
                            <td>Mark</td>
                         </tr>
-                        {% for task in data %}
+                        {% for task in tasks %}
                             {% if not task.Mark %}
                                 <tr class="line sp">
                                     <td style="color: #0A7EFB"> {{ task.Task }}</td>
