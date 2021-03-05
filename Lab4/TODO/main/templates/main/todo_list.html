@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo list</title>
+    <link rel="stylesheet" href="{% static 'main/css/todo_list.css' %}">
+</head>
+<body>
+   <header>
+            <div id="head">BFDjango TODO</div>
+   </header>
+        <div class="content">
+            <div class="main-content">
+                <div>
+                    <button id="add-button">Add Task</button>
+                </div>
+                <div class="list">
+                    <h1>Tasks in "List1"</h1>
+                </div>
+                <table>
+                        <tr class="list" id="column">
+                           <td>Task</td>
+                           <td>Created</td>
+                           <td>Due on</td>
+                           <td>Owner</td>
+                           <td>Mark</td>
+                        </tr>
+                        {% for task in tasks %}
+                                <tr class="list">
+                                    <td id="task"> {{ task.task }}</td>
+                                    <td> {{ task.created }}</td>
+                                    <td> {{ task.due_on }}</td>
+                                    <td> {{ task.owner }}</td>
+                                    <td> <button id="mark">Done</button> </td>
+                                </tr>
+                        {% endfor %}
+                    </table>
+                <div>
+                    <button id="view">View completed tasks</button>
+                    <button id="delete">Delete this List</button>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
